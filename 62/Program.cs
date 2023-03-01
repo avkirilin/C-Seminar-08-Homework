@@ -5,7 +5,6 @@
 // 11 16 15 06
 // 10 09 08 07
 void PrintArray<T>(T[,] arr)
-
 {
     Console.WriteLine("Заполненный массив по спирали: ");
     for (int i = 0; i < arr.GetLength(0); i++)
@@ -17,12 +16,8 @@ void PrintArray<T>(T[,] arr)
         Console.WriteLine();
     }
 }
-
-
 string[,] sqareArray = new string[4, 4];
-
 int temp = 1; int i = 0; int j = 0;
-
 while (temp <= sqareArray.GetLength(0) * sqareArray.GetLength(1))
 {
     sqareArray[i, j] = temp.ToString().Length < 2 ? $"0{temp.ToString()}" : temp.ToString();
@@ -36,5 +31,4 @@ while (temp <= sqareArray.GetLength(0) * sqareArray.GetLength(1))
     else
         i--;
 }
-
 PrintArray(sqareArray);
